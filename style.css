@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    /* 🌄 background image */
+    background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url("Rose Nebula Style.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ===================== */
+/* CONTAINER */
+/* ===================== */
+.container {
+    text-align: center;
+}
+
+/* ===================== */
+/* TITLE */
+/* ===================== */
+h1 {
+    font-family: 'Dancing Script', cursive;
+
+    font-size: 100px;
+    color: #b56cff;
+
+    margin-top: 10px;
+
+    text-shadow:
+        0 0 8px rgba(181, 108, 255, 0.9),
+        0 0 18px rgba(181, 108, 255, 0.7),
+        0 0 30px rgba(181, 108, 255, 0.5);
+
+    animation: glowPulse 1.8s infinite;
+}
+
+@keyframes glowPulse {
+    0% {
+        text-shadow:
+            0 0 6px rgba(181, 108, 255, 0.7),
+            0 0 14px rgba(181, 108, 255, 0.5);
+    }
+    50% {
+        text-shadow:
+            0 0 12px rgba(181, 108, 255, 1),
+            0 0 25px rgba(181, 108, 255, 0.8),
+            0 0 40px rgba(181, 108, 255, 0.6);
+    }
+    100% {
+        text-shadow:
+            0 0 6px rgba(181, 108, 255, 0.7),
+            0 0 14px rgba(181, 108, 255, 0.5);
+    }
+}
+
+/* ===================== */
+/* WHEEL WRAPPER */
+/* ===================== */
+.wheel-wrapper {
+    position: relative;
+
+    width: 520px;
+    height: 520px;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: radial-gradient(circle, #fff3a0, #ffcc00);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 15px rgba(255, 204, 0, 0.6),
+        0 0 35px rgba(255, 204, 0, 0.3);
+}
+
+/* ===================== */
+/* POINTER */
+/* ===================== */
+.pointer {
+    width: 0;
+    height: 0;
+
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 50px solid red;
+
+    position: absolute;
+    top: -10px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    filter: drop-shadow(0 0 6px red)
+            drop-shadow(0 0 12px red);
+}
+
+/* ===================== */
+/* WHEEL */
+/* ===================== */
+.wheel {
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    background: conic-gradient(
+        #ff4d4d 0deg 60deg,
+        #4da6ff 60deg 120deg,
+        #66ff66 120deg 180deg,
+        #ffcc00 180deg 240deg,
+        #cc66ff 240deg 300deg,
+        #ff884d 300deg 360deg
+    );
+
+    transition: transform 5s ease-out;
+
+    transform-origin: center;
+}
+
+/* ===================== */
+/* SPIN BUTTON */
+/* ===================== */
+#spinBtn {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: radial-gradient(circle, #fff3a0, #ffcc00);
+
+    font-weight: bold;
+    cursor: pointer;
+
+    z-index: 20;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+/* ===================== */
+/* ICONS */
+/* ===================== */
+.icon {
+    position: absolute;
+
+    width: 60px;
+    height: 60px;
+
+    top: 45%;
+    left: 45%;
+
+    transform-origin: center;
+
+    border-radius: 6px;
+
+    background-size: cover;
+    background-position: center;
+
+    z-index: 5;
+
+    box-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+
+/* ===================== */
+/* ICON POSITIONS (6 SEGMENTS) */
+/* ===================== */
+.i1 { transform: rotate(30deg) translateY(-200px); }
+.i2 { transform: rotate(90deg) translateY(-200px); }
+.i3 { transform: rotate(150deg) translateY(-200px); }
+.i4 { transform: rotate(210deg) translateY(-200px); }
+.i5 { transform: rotate(270deg) translateY(-200px); }
+.i6 { transform: rotate(330deg) translateY(-200px); }
+
+/* ===================== */
+/* ICON IMAGES (REPLACE FILES) */
+/* ===================== */
+.i1 { background-image: url("001 TTU.JPG"); }
+.i2 { background-image: url("002 Lion.JPG"); }
+.i3 { background-image: url("003 Phoenix.JPG"); }
+.i4 { background-image: url("004 Rocket.JPG"); }
+.i5 { background-image: url("005 Rose Nebula.JPG"); }
+.i6 { background-image: url("006 Dragon.JPG"); }
+
+/* ===================== */
+/* CONTROL PANEL */
+/* ===================== */
+
+.control-panel {
+    margin-top: -200px;
+    margin-left: 100px;
+    color: white;
+}
+
+#creditDisplay {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#adminCode {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+#addCreditBtn {
+    padding: 5px 10px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#logBox {
+    margin-top: 15px;
+
+    padding: 10px;
+
+    background: rgba(0,0,0,0.4);
+
+    border-radius: 10px;
+
+    color: white;
+
+    max-height: 200px;
+    overflow-y: auto;
+
+    font-size: 14px;
+}
+
+#logBox h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #ffcc00;
+}
+
+.log-item {
+    margin-bottom: 6px;
+    font-size: 13px;
+}

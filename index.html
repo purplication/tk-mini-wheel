@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lucky Spin Wheel</title>
+
+    <!-- 🎨 Cursive font -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- 🎯 Title -->
+        <h1>Lucky Spin</h1>
+
+        <!-- 🎡 Wheel Section -->
+        <div class="wheel-wrapper">
+
+            <div class="pointer"></div>
+
+            <!-- 🎡 Wheel -->
+            <div class="wheel" id="wheel">
+
+                <!-- 🧲 Icons (6 segments) -->
+                <div class="icon i1"></div>
+                <div class="icon i2"></div>
+                <div class="icon i3"></div>
+                <div class="icon i4"></div>
+                <div class="icon i5"></div>
+                <div class="icon i6"></div>
+
+            </div>
+
+            <!-- 🔘 Spin Button -->
+            <button id="spinBtn">SPIN</button>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE PANEL -->
+    <div class="control-panel">
+
+        <p id="creditDisplay">Credits: 0</p>
+
+        <input type="password" id="adminCode" placeholder="Enter passcode">
+        <button id="addCreditBtn">Add Credit</button>
+
+        <div id="logBox">
+            <h3>Spin Log</h3>
+            <div id="logList"></div>
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
